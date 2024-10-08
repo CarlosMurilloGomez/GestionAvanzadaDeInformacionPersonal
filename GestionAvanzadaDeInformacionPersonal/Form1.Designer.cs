@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControlPrincipal = new System.Windows.Forms.TabControl();
             this.tabDatos = new System.Windows.Forms.TabPage();
             this.lbCorreo = new System.Windows.Forms.Label();
@@ -54,22 +56,41 @@
             this.lbPais = new System.Windows.Forms.Label();
             this.lbHobbies = new System.Windows.Forms.Label();
             this.lbSatisfaccion = new System.Windows.Forms.Label();
+            this.tabVisualizacion = new System.Windows.Forms.TabPage();
+            this.pbxFoto = new System.Windows.Forms.PictureBox();
+            this.btnFoto = new System.Windows.Forms.Button();
+            this.lbHora = new System.Windows.Forms.Label();
+            this.timerHora = new System.Windows.Forms.Timer(this.components);
+            this.abrirFotoPerfil = new System.Windows.Forms.OpenFileDialog();
+            this.lbFoto = new System.Windows.Forms.Label();
+            this.lbDatosNombre = new System.Windows.Forms.Label();
+            this.lbDatosDireccion = new System.Windows.Forms.Label();
+            this.lbDatosEmail = new System.Windows.Forms.Label();
+            this.lbDatosGenero = new System.Windows.Forms.Label();
+            this.lbDatosEdad = new System.Windows.Forms.Label();
+            this.lbDatosFechaNac = new System.Windows.Forms.Label();
+            this.lbDatosPais = new System.Windows.Forms.Label();
+            this.lbDatosHobbies = new System.Windows.Forms.Label();
+            this.lbDatosSuscripcion = new System.Windows.Forms.Label();
             this.tabControlPrincipal.SuspendLayout();
             this.tabDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEdad)).BeginInit();
             this.pnlGenero.SuspendLayout();
             this.tabPreferencias.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trbSatisfaccion)).BeginInit();
+            this.tabVisualizacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlPrincipal
             // 
             this.tabControlPrincipal.Controls.Add(this.tabDatos);
             this.tabControlPrincipal.Controls.Add(this.tabPreferencias);
+            this.tabControlPrincipal.Controls.Add(this.tabVisualizacion);
             this.tabControlPrincipal.Location = new System.Drawing.Point(12, 12);
             this.tabControlPrincipal.Name = "tabControlPrincipal";
             this.tabControlPrincipal.SelectedIndex = 0;
-            this.tabControlPrincipal.Size = new System.Drawing.Size(776, 357);
+            this.tabControlPrincipal.Size = new System.Drawing.Size(822, 357);
             this.tabControlPrincipal.TabIndex = 0;
             // 
             // tabDatos
@@ -89,7 +110,7 @@
             this.tabDatos.Location = new System.Drawing.Point(4, 25);
             this.tabDatos.Name = "tabDatos";
             this.tabDatos.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDatos.Size = new System.Drawing.Size(768, 328);
+            this.tabDatos.Size = new System.Drawing.Size(814, 328);
             this.tabDatos.TabIndex = 0;
             this.tabDatos.Text = "Datos personales";
             this.tabDatos.UseVisualStyleBackColor = true;
@@ -132,7 +153,7 @@
             // 
             // mcalFechaNac
             // 
-            this.mcalFechaNac.Location = new System.Drawing.Point(525, 77);
+            this.mcalFechaNac.Location = new System.Drawing.Point(534, 77);
             this.mcalFechaNac.Name = "mcalFechaNac";
             this.mcalFechaNac.TabIndex = 4;
             // 
@@ -237,7 +258,7 @@
             this.tabPreferencias.Controls.Add(this.cbxSuscribir);
             this.tabPreferencias.Location = new System.Drawing.Point(4, 25);
             this.tabPreferencias.Name = "tabPreferencias";
-            this.tabPreferencias.Size = new System.Drawing.Size(768, 328);
+            this.tabPreferencias.Size = new System.Drawing.Size(814, 328);
             this.tabPreferencias.TabIndex = 1;
             this.tabPreferencias.Text = "Preferencias";
             this.tabPreferencias.UseVisualStyleBackColor = true;
@@ -344,11 +365,160 @@
             this.lbSatisfaccion.TabIndex = 7;
             this.lbSatisfaccion.Text = "Ingresa tu nivel de satisfaccion con el servicio";
             // 
+            // tabVisualizacion
+            // 
+            this.tabVisualizacion.Controls.Add(this.lbDatosSuscripcion);
+            this.tabVisualizacion.Controls.Add(this.lbDatosHobbies);
+            this.tabVisualizacion.Controls.Add(this.lbDatosPais);
+            this.tabVisualizacion.Controls.Add(this.lbDatosFechaNac);
+            this.tabVisualizacion.Controls.Add(this.lbDatosEdad);
+            this.tabVisualizacion.Controls.Add(this.lbDatosGenero);
+            this.tabVisualizacion.Controls.Add(this.lbDatosEmail);
+            this.tabVisualizacion.Controls.Add(this.lbDatosDireccion);
+            this.tabVisualizacion.Controls.Add(this.lbDatosNombre);
+            this.tabVisualizacion.Controls.Add(this.lbFoto);
+            this.tabVisualizacion.Controls.Add(this.lbHora);
+            this.tabVisualizacion.Controls.Add(this.btnFoto);
+            this.tabVisualizacion.Controls.Add(this.pbxFoto);
+            this.tabVisualizacion.Location = new System.Drawing.Point(4, 25);
+            this.tabVisualizacion.Name = "tabVisualizacion";
+            this.tabVisualizacion.Size = new System.Drawing.Size(814, 328);
+            this.tabVisualizacion.TabIndex = 2;
+            this.tabVisualizacion.Text = "Visualización";
+            this.tabVisualizacion.UseVisualStyleBackColor = true;
+            // 
+            // pbxFoto
+            // 
+            this.pbxFoto.Image = ((System.Drawing.Image)(resources.GetObject("pbxFoto.Image")));
+            this.pbxFoto.Location = new System.Drawing.Point(37, 44);
+            this.pbxFoto.Name = "pbxFoto";
+            this.pbxFoto.Size = new System.Drawing.Size(194, 176);
+            this.pbxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxFoto.TabIndex = 0;
+            this.pbxFoto.TabStop = false;
+            // 
+            // btnFoto
+            // 
+            this.btnFoto.Location = new System.Drawing.Point(74, 226);
+            this.btnFoto.Name = "btnFoto";
+            this.btnFoto.Size = new System.Drawing.Size(128, 52);
+            this.btnFoto.TabIndex = 1;
+            this.btnFoto.Text = "Seleccionar Imagen";
+            this.btnFoto.UseVisualStyleBackColor = true;
+            this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
+            // 
+            // lbHora
+            // 
+            this.lbHora.AutoSize = true;
+            this.lbHora.Location = new System.Drawing.Point(88, 292);
+            this.lbHora.Name = "lbHora";
+            this.lbHora.Size = new System.Drawing.Size(91, 16);
+            this.lbHora.TabIndex = 2;
+            this.lbHora.Text = "Hora: 00:00:00";
+            // 
+            // timerHora
+            // 
+            this.timerHora.Interval = 1000;
+            this.timerHora.Tick += new System.EventHandler(this.timerHora_Tick);
+            // 
+            // abrirFotoPerfil
+            // 
+            this.abrirFotoPerfil.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.bmp";
+            // 
+            // lbFoto
+            // 
+            this.lbFoto.AutoSize = true;
+            this.lbFoto.Location = new System.Drawing.Point(34, 25);
+            this.lbFoto.Name = "lbFoto";
+            this.lbFoto.Size = new System.Drawing.Size(179, 16);
+            this.lbFoto.TabIndex = 3;
+            this.lbFoto.Text = "Selecciona una foto de perfil:";
+            // 
+            // lbDatosNombre
+            // 
+            this.lbDatosNombre.AutoSize = true;
+            this.lbDatosNombre.Location = new System.Drawing.Point(330, 65);
+            this.lbDatosNombre.Name = "lbDatosNombre";
+            this.lbDatosNombre.Size = new System.Drawing.Size(62, 16);
+            this.lbDatosNombre.TabIndex = 4;
+            this.lbDatosNombre.Text = "Nombre: ";
+            // 
+            // lbDatosDireccion
+            // 
+            this.lbDatosDireccion.AutoSize = true;
+            this.lbDatosDireccion.Location = new System.Drawing.Point(330, 103);
+            this.lbDatosDireccion.Name = "lbDatosDireccion";
+            this.lbDatosDireccion.Size = new System.Drawing.Size(67, 16);
+            this.lbDatosDireccion.TabIndex = 5;
+            this.lbDatosDireccion.Text = "Dirección:";
+            // 
+            // lbDatosEmail
+            // 
+            this.lbDatosEmail.AutoSize = true;
+            this.lbDatosEmail.Location = new System.Drawing.Point(330, 146);
+            this.lbDatosEmail.Name = "lbDatosEmail";
+            this.lbDatosEmail.Size = new System.Drawing.Size(48, 16);
+            this.lbDatosEmail.TabIndex = 6;
+            this.lbDatosEmail.Text = "E-mail:";
+            // 
+            // lbDatosGenero
+            // 
+            this.lbDatosGenero.AutoSize = true;
+            this.lbDatosGenero.Location = new System.Drawing.Point(330, 188);
+            this.lbDatosGenero.Name = "lbDatosGenero";
+            this.lbDatosGenero.Size = new System.Drawing.Size(55, 16);
+            this.lbDatosGenero.TabIndex = 7;
+            this.lbDatosGenero.Text = "Género:";
+            // 
+            // lbDatosEdad
+            // 
+            this.lbDatosEdad.AutoSize = true;
+            this.lbDatosEdad.Location = new System.Drawing.Point(516, 65);
+            this.lbDatosEdad.Name = "lbDatosEdad";
+            this.lbDatosEdad.Size = new System.Drawing.Size(43, 16);
+            this.lbDatosEdad.TabIndex = 8;
+            this.lbDatosEdad.Text = "Edad:";
+            // 
+            // lbDatosFechaNac
+            // 
+            this.lbDatosFechaNac.AutoSize = true;
+            this.lbDatosFechaNac.Location = new System.Drawing.Point(516, 103);
+            this.lbDatosFechaNac.Name = "lbDatosFechaNac";
+            this.lbDatosFechaNac.Size = new System.Drawing.Size(134, 16);
+            this.lbDatosFechaNac.TabIndex = 9;
+            this.lbDatosFechaNac.Text = "FechaDeNacimiento:";
+            // 
+            // lbDatosPais
+            // 
+            this.lbDatosPais.AutoSize = true;
+            this.lbDatosPais.Location = new System.Drawing.Point(516, 146);
+            this.lbDatosPais.Name = "lbDatosPais";
+            this.lbDatosPais.Size = new System.Drawing.Size(37, 16);
+            this.lbDatosPais.TabIndex = 10;
+            this.lbDatosPais.Text = "País:";
+            // 
+            // lbDatosHobbies
+            // 
+            this.lbDatosHobbies.Location = new System.Drawing.Point(516, 188);
+            this.lbDatosHobbies.Name = "lbDatosHobbies";
+            this.lbDatosHobbies.Size = new System.Drawing.Size(197, 90);
+            this.lbDatosHobbies.TabIndex = 11;
+            this.lbDatosHobbies.Text = "Hobbies:";
+            // 
+            // lbDatosSuscripcion
+            // 
+            this.lbDatosSuscripcion.AutoSize = true;
+            this.lbDatosSuscripcion.Location = new System.Drawing.Point(516, 282);
+            this.lbDatosSuscripcion.Name = "lbDatosSuscripcion";
+            this.lbDatosSuscripcion.Size = new System.Drawing.Size(88, 16);
+            this.lbDatosSuscripcion.TabIndex = 12;
+            this.lbDatosSuscripcion.Text = "Subscripcion:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(846, 450);
             this.Controls.Add(this.tabControlPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -363,6 +533,9 @@
             this.tabPreferencias.ResumeLayout(false);
             this.tabPreferencias.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trbSatisfaccion)).EndInit();
+            this.tabVisualizacion.ResumeLayout(false);
+            this.tabVisualizacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -395,6 +568,22 @@
         private System.Windows.Forms.ComboBox combPais;
         private System.Windows.Forms.CheckedListBox clbHobbies;
         private System.Windows.Forms.CheckBox cbxSuscribir;
+        private System.Windows.Forms.TabPage tabVisualizacion;
+        private System.Windows.Forms.Label lbFoto;
+        private System.Windows.Forms.Label lbHora;
+        private System.Windows.Forms.Button btnFoto;
+        private System.Windows.Forms.PictureBox pbxFoto;
+        private System.Windows.Forms.Timer timerHora;
+        private System.Windows.Forms.OpenFileDialog abrirFotoPerfil;
+        private System.Windows.Forms.Label lbDatosNombre;
+        private System.Windows.Forms.Label lbDatosSuscripcion;
+        private System.Windows.Forms.Label lbDatosHobbies;
+        private System.Windows.Forms.Label lbDatosPais;
+        private System.Windows.Forms.Label lbDatosFechaNac;
+        private System.Windows.Forms.Label lbDatosEdad;
+        private System.Windows.Forms.Label lbDatosGenero;
+        private System.Windows.Forms.Label lbDatosEmail;
+        private System.Windows.Forms.Label lbDatosDireccion;
     }
 }
 

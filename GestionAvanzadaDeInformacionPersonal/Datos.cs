@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,10 @@ namespace GestionAvanzadaDeInformacionPersonal
         String Genero { get; set; }
         int Edad {  get; set; }
         DateTime FechaNac {  get; set; }
+        String Pais { get; set; }
+        ArrayList Hobbies { get; set; }
+        bool Subscripcion {  get; set; }
+        int NivelSatisfacción { get; set; }
 
     }
 }

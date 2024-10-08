@@ -12,7 +12,9 @@ using System.Windows.Forms;
 namespace GestionAvanzadaDeInformacionPersonal
 {
     public partial class Form1 : Form
-    {
+    {            
+        Datos datos = new Datos();
+
         public Form1()
         {
             InitializeComponent();
@@ -20,7 +22,21 @@ namespace GestionAvanzadaDeInformacionPersonal
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Datos datos = new Datos();
+            timerHora.Start();
+            tabControlPrincipal.SelectedIndex = 0;
+        }
+
+        private void timerHora_Tick(object sender, EventArgs e)
+        {
+            lbHora.Text = "Hora: "+ DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void btnFoto_Click(object sender, EventArgs e)
+        {
+            if (abrirFotoPerfil.ShowDialog() == DialogResult.OK)
+            {
+                pbxFoto.Image = Image.FromFile(abrirFotoPerfil.FileName);
+            }
         }
     }
 }

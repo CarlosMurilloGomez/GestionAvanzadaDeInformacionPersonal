@@ -45,33 +45,37 @@
             this.rbtFem = new System.Windows.Forms.RadioButton();
             this.rbtMasc = new System.Windows.Forms.RadioButton();
             this.tbxCorreo = new System.Windows.Forms.TextBox();
-            this.tbxDirección = new System.Windows.Forms.TextBox();
+            this.tbxDireccion = new System.Windows.Forms.TextBox();
             this.tbxNombre = new System.Windows.Forms.TextBox();
             this.tabPreferencias = new System.Windows.Forms.TabPage();
-            this.cbxSuscribir = new System.Windows.Forms.CheckBox();
-            this.clbHobbies = new System.Windows.Forms.CheckedListBox();
-            this.combPais = new System.Windows.Forms.ComboBox();
-            this.trbSatisfaccion = new System.Windows.Forms.TrackBar();
-            this.lbSuscribir = new System.Windows.Forms.Label();
-            this.lbPais = new System.Windows.Forms.Label();
-            this.lbHobbies = new System.Windows.Forms.Label();
             this.lbSatisfaccion = new System.Windows.Forms.Label();
+            this.lbHobbies = new System.Windows.Forms.Label();
+            this.lbPais = new System.Windows.Forms.Label();
+            this.lbSuscribir = new System.Windows.Forms.Label();
+            this.trbSatisfaccion = new System.Windows.Forms.TrackBar();
+            this.combPais = new System.Windows.Forms.ComboBox();
+            this.clbHobbies = new System.Windows.Forms.CheckedListBox();
+            this.cbxSuscribir = new System.Windows.Forms.CheckBox();
             this.tabVisualizacion = new System.Windows.Forms.TabPage();
-            this.pbxFoto = new System.Windows.Forms.PictureBox();
-            this.btnFoto = new System.Windows.Forms.Button();
+            this.lbPulsarGuardar = new System.Windows.Forms.Label();
+            this.lbDatosSuscripcion = new System.Windows.Forms.Label();
+            this.lbDatosHobbies = new System.Windows.Forms.Label();
+            this.lbDatosPais = new System.Windows.Forms.Label();
+            this.lbDatosFechaNac = new System.Windows.Forms.Label();
+            this.lbDatosEdad = new System.Windows.Forms.Label();
+            this.lbDatosGenero = new System.Windows.Forms.Label();
+            this.lbDatosEmail = new System.Windows.Forms.Label();
+            this.lbDatosDireccion = new System.Windows.Forms.Label();
+            this.lbDatosNombre = new System.Windows.Forms.Label();
+            this.lbFoto = new System.Windows.Forms.Label();
             this.lbHora = new System.Windows.Forms.Label();
+            this.btnFoto = new System.Windows.Forms.Button();
+            this.pbxFoto = new System.Windows.Forms.PictureBox();
             this.timerHora = new System.Windows.Forms.Timer(this.components);
             this.abrirFotoPerfil = new System.Windows.Forms.OpenFileDialog();
-            this.lbFoto = new System.Windows.Forms.Label();
-            this.lbDatosNombre = new System.Windows.Forms.Label();
-            this.lbDatosDireccion = new System.Windows.Forms.Label();
-            this.lbDatosEmail = new System.Windows.Forms.Label();
-            this.lbDatosGenero = new System.Windows.Forms.Label();
-            this.lbDatosEdad = new System.Windows.Forms.Label();
-            this.lbDatosFechaNac = new System.Windows.Forms.Label();
-            this.lbDatosPais = new System.Windows.Forms.Label();
-            this.lbDatosHobbies = new System.Windows.Forms.Label();
-            this.lbDatosSuscripcion = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.tabControlPrincipal.SuspendLayout();
             this.tabDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEdad)).BeginInit();
@@ -105,7 +109,7 @@
             this.tabDatos.Controls.Add(this.nudEdad);
             this.tabDatos.Controls.Add(this.pnlGenero);
             this.tabDatos.Controls.Add(this.tbxCorreo);
-            this.tabDatos.Controls.Add(this.tbxDirección);
+            this.tabDatos.Controls.Add(this.tbxDireccion);
             this.tabDatos.Controls.Add(this.tbxNombre);
             this.tabDatos.Location = new System.Drawing.Point(4, 25);
             this.tabDatos.Name = "tabDatos";
@@ -154,6 +158,7 @@
             // mcalFechaNac
             // 
             this.mcalFechaNac.Location = new System.Drawing.Point(534, 77);
+            this.mcalFechaNac.MaxSelectionCount = 1;
             this.mcalFechaNac.Name = "mcalFechaNac";
             this.mcalFechaNac.TabIndex = 4;
             // 
@@ -232,12 +237,12 @@
             this.tbxCorreo.Size = new System.Drawing.Size(100, 22);
             this.tbxCorreo.TabIndex = 2;
             // 
-            // tbxDirección
+            // tbxDireccion
             // 
-            this.tbxDirección.Location = new System.Drawing.Point(167, 149);
-            this.tbxDirección.Name = "tbxDirección";
-            this.tbxDirección.Size = new System.Drawing.Size(100, 22);
-            this.tbxDirección.TabIndex = 1;
+            this.tbxDireccion.Location = new System.Drawing.Point(167, 149);
+            this.tbxDireccion.Name = "tbxDireccion";
+            this.tbxDireccion.Size = new System.Drawing.Size(100, 22);
+            this.tbxDireccion.TabIndex = 1;
             // 
             // tbxNombre
             // 
@@ -263,33 +268,48 @@
             this.tabPreferencias.Text = "Preferencias";
             this.tabPreferencias.UseVisualStyleBackColor = true;
             // 
-            // cbxSuscribir
+            // lbSatisfaccion
             // 
-            this.cbxSuscribir.AutoSize = true;
-            this.cbxSuscribir.Location = new System.Drawing.Point(80, 268);
-            this.cbxSuscribir.Name = "cbxSuscribir";
-            this.cbxSuscribir.Size = new System.Drawing.Size(232, 20);
-            this.cbxSuscribir.TabIndex = 0;
-            this.cbxSuscribir.Text = "Si, suscribirse para recibir noticias";
-            this.cbxSuscribir.UseVisualStyleBackColor = true;
+            this.lbSatisfaccion.AutoSize = true;
+            this.lbSatisfaccion.Location = new System.Drawing.Point(440, 205);
+            this.lbSatisfaccion.Name = "lbSatisfaccion";
+            this.lbSatisfaccion.Size = new System.Drawing.Size(278, 16);
+            this.lbSatisfaccion.TabIndex = 7;
+            this.lbSatisfaccion.Text = "Ingresa tu nivel de satisfaccion con el servicio";
             // 
-            // clbHobbies
+            // lbHobbies
             // 
-            this.clbHobbies.CheckOnClick = true;
-            this.clbHobbies.FormattingEnabled = true;
-            this.clbHobbies.Items.AddRange(new object[] {
-            "Videojuegos",
-            "Pesca",
-            "Fútbol",
-            "Baloncesto",
-            "Lectura",
-            "Musica",
-            "Cocina",
-            "Senderismo"});
-            this.clbHobbies.Location = new System.Drawing.Point(440, 78);
-            this.clbHobbies.Name = "clbHobbies";
-            this.clbHobbies.Size = new System.Drawing.Size(135, 89);
-            this.clbHobbies.TabIndex = 1;
+            this.lbHobbies.AutoSize = true;
+            this.lbHobbies.Location = new System.Drawing.Point(437, 38);
+            this.lbHobbies.Name = "lbHobbies";
+            this.lbHobbies.Size = new System.Drawing.Size(216, 16);
+            this.lbHobbies.TabIndex = 6;
+            this.lbHobbies.Text = "Selecciona tus hobbies o intereses";
+            // 
+            // lbPais
+            // 
+            this.lbPais.AutoSize = true;
+            this.lbPais.Location = new System.Drawing.Point(77, 58);
+            this.lbPais.Name = "lbPais";
+            this.lbPais.Size = new System.Drawing.Size(165, 16);
+            this.lbPais.TabIndex = 5;
+            this.lbPais.Text = "Elige tu país de residencia";
+            // 
+            // lbSuscribir
+            // 
+            this.lbSuscribir.AutoSize = true;
+            this.lbSuscribir.Location = new System.Drawing.Point(77, 228);
+            this.lbSuscribir.Name = "lbSuscribir";
+            this.lbSuscribir.Size = new System.Drawing.Size(233, 16);
+            this.lbSuscribir.TabIndex = 4;
+            this.lbSuscribir.Text = "¿Quieres suscribirte a nuestro boletín?";
+            // 
+            // trbSatisfaccion
+            // 
+            this.trbSatisfaccion.Location = new System.Drawing.Point(443, 242);
+            this.trbSatisfaccion.Name = "trbSatisfaccion";
+            this.trbSatisfaccion.Size = new System.Drawing.Size(298, 56);
+            this.trbSatisfaccion.TabIndex = 3;
             // 
             // combPais
             // 
@@ -322,51 +342,37 @@
             this.combPais.Size = new System.Drawing.Size(121, 24);
             this.combPais.TabIndex = 2;
             // 
-            // trbSatisfaccion
+            // clbHobbies
             // 
-            this.trbSatisfaccion.Location = new System.Drawing.Point(443, 242);
-            this.trbSatisfaccion.Name = "trbSatisfaccion";
-            this.trbSatisfaccion.Size = new System.Drawing.Size(298, 56);
-            this.trbSatisfaccion.TabIndex = 3;
+            this.clbHobbies.CheckOnClick = true;
+            this.clbHobbies.FormattingEnabled = true;
+            this.clbHobbies.Items.AddRange(new object[] {
+            "Videojuegos",
+            "Pesca",
+            "Fútbol",
+            "Baloncesto",
+            "Lectura",
+            "Musica",
+            "Cocina",
+            "Senderismo"});
+            this.clbHobbies.Location = new System.Drawing.Point(440, 78);
+            this.clbHobbies.Name = "clbHobbies";
+            this.clbHobbies.Size = new System.Drawing.Size(135, 89);
+            this.clbHobbies.TabIndex = 1;
             // 
-            // lbSuscribir
+            // cbxSuscribir
             // 
-            this.lbSuscribir.AutoSize = true;
-            this.lbSuscribir.Location = new System.Drawing.Point(77, 228);
-            this.lbSuscribir.Name = "lbSuscribir";
-            this.lbSuscribir.Size = new System.Drawing.Size(233, 16);
-            this.lbSuscribir.TabIndex = 4;
-            this.lbSuscribir.Text = "¿Quieres suscribirte a nuestro boletín?";
-            // 
-            // lbPais
-            // 
-            this.lbPais.AutoSize = true;
-            this.lbPais.Location = new System.Drawing.Point(77, 58);
-            this.lbPais.Name = "lbPais";
-            this.lbPais.Size = new System.Drawing.Size(165, 16);
-            this.lbPais.TabIndex = 5;
-            this.lbPais.Text = "Elige tu país de residencia";
-            // 
-            // lbHobbies
-            // 
-            this.lbHobbies.AutoSize = true;
-            this.lbHobbies.Location = new System.Drawing.Point(437, 38);
-            this.lbHobbies.Name = "lbHobbies";
-            this.lbHobbies.Size = new System.Drawing.Size(216, 16);
-            this.lbHobbies.TabIndex = 6;
-            this.lbHobbies.Text = "Selecciona tus hobbies o intereses";
-            // 
-            // lbSatisfaccion
-            // 
-            this.lbSatisfaccion.AutoSize = true;
-            this.lbSatisfaccion.Location = new System.Drawing.Point(440, 205);
-            this.lbSatisfaccion.Name = "lbSatisfaccion";
-            this.lbSatisfaccion.Size = new System.Drawing.Size(278, 16);
-            this.lbSatisfaccion.TabIndex = 7;
-            this.lbSatisfaccion.Text = "Ingresa tu nivel de satisfaccion con el servicio";
+            this.cbxSuscribir.AutoSize = true;
+            this.cbxSuscribir.Location = new System.Drawing.Point(80, 268);
+            this.cbxSuscribir.Name = "cbxSuscribir";
+            this.cbxSuscribir.Size = new System.Drawing.Size(232, 20);
+            this.cbxSuscribir.TabIndex = 0;
+            this.cbxSuscribir.Text = "Si, suscribirse para recibir noticias";
+            this.cbxSuscribir.UseVisualStyleBackColor = true;
             // 
             // tabVisualizacion
             // 
+            this.tabVisualizacion.Controls.Add(this.lbPulsarGuardar);
             this.tabVisualizacion.Controls.Add(this.lbDatosSuscripcion);
             this.tabVisualizacion.Controls.Add(this.lbDatosHobbies);
             this.tabVisualizacion.Controls.Add(this.lbDatosPais);
@@ -387,15 +393,112 @@
             this.tabVisualizacion.Text = "Visualización";
             this.tabVisualizacion.UseVisualStyleBackColor = true;
             // 
-            // pbxFoto
+            // lbPulsarGuardar
             // 
-            this.pbxFoto.Image = ((System.Drawing.Image)(resources.GetObject("pbxFoto.Image")));
-            this.pbxFoto.Location = new System.Drawing.Point(37, 44);
-            this.pbxFoto.Name = "pbxFoto";
-            this.pbxFoto.Size = new System.Drawing.Size(194, 176);
-            this.pbxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxFoto.TabIndex = 0;
-            this.pbxFoto.TabStop = false;
+            this.lbPulsarGuardar.AutoSize = true;
+            this.lbPulsarGuardar.Location = new System.Drawing.Point(330, 25);
+            this.lbPulsarGuardar.Name = "lbPulsarGuardar";
+            this.lbPulsarGuardar.Size = new System.Drawing.Size(291, 16);
+            this.lbPulsarGuardar.TabIndex = 13;
+            this.lbPulsarGuardar.Text = "Pulsa el boton guardar para actualizar los datos";
+            // 
+            // lbDatosSuscripcion
+            // 
+            this.lbDatosSuscripcion.AutoSize = true;
+            this.lbDatosSuscripcion.Location = new System.Drawing.Point(516, 282);
+            this.lbDatosSuscripcion.Name = "lbDatosSuscripcion";
+            this.lbDatosSuscripcion.Size = new System.Drawing.Size(88, 16);
+            this.lbDatosSuscripcion.TabIndex = 12;
+            this.lbDatosSuscripcion.Text = "Subscripcion:";
+            // 
+            // lbDatosHobbies
+            // 
+            this.lbDatosHobbies.Location = new System.Drawing.Point(516, 188);
+            this.lbDatosHobbies.Name = "lbDatosHobbies";
+            this.lbDatosHobbies.Size = new System.Drawing.Size(197, 90);
+            this.lbDatosHobbies.TabIndex = 11;
+            this.lbDatosHobbies.Text = "Hobbies:";
+            // 
+            // lbDatosPais
+            // 
+            this.lbDatosPais.AutoSize = true;
+            this.lbDatosPais.Location = new System.Drawing.Point(516, 146);
+            this.lbDatosPais.Name = "lbDatosPais";
+            this.lbDatosPais.Size = new System.Drawing.Size(37, 16);
+            this.lbDatosPais.TabIndex = 10;
+            this.lbDatosPais.Text = "País:";
+            // 
+            // lbDatosFechaNac
+            // 
+            this.lbDatosFechaNac.AutoSize = true;
+            this.lbDatosFechaNac.Location = new System.Drawing.Point(516, 103);
+            this.lbDatosFechaNac.Name = "lbDatosFechaNac";
+            this.lbDatosFechaNac.Size = new System.Drawing.Size(135, 16);
+            this.lbDatosFechaNac.TabIndex = 9;
+            this.lbDatosFechaNac.Text = "Fecha de nacimiento:";
+            // 
+            // lbDatosEdad
+            // 
+            this.lbDatosEdad.AutoSize = true;
+            this.lbDatosEdad.Location = new System.Drawing.Point(516, 65);
+            this.lbDatosEdad.Name = "lbDatosEdad";
+            this.lbDatosEdad.Size = new System.Drawing.Size(43, 16);
+            this.lbDatosEdad.TabIndex = 8;
+            this.lbDatosEdad.Text = "Edad:";
+            // 
+            // lbDatosGenero
+            // 
+            this.lbDatosGenero.AutoSize = true;
+            this.lbDatosGenero.Location = new System.Drawing.Point(330, 188);
+            this.lbDatosGenero.Name = "lbDatosGenero";
+            this.lbDatosGenero.Size = new System.Drawing.Size(55, 16);
+            this.lbDatosGenero.TabIndex = 7;
+            this.lbDatosGenero.Text = "Género:";
+            // 
+            // lbDatosEmail
+            // 
+            this.lbDatosEmail.AutoSize = true;
+            this.lbDatosEmail.Location = new System.Drawing.Point(330, 146);
+            this.lbDatosEmail.Name = "lbDatosEmail";
+            this.lbDatosEmail.Size = new System.Drawing.Size(48, 16);
+            this.lbDatosEmail.TabIndex = 6;
+            this.lbDatosEmail.Text = "E-mail:";
+            // 
+            // lbDatosDireccion
+            // 
+            this.lbDatosDireccion.AutoSize = true;
+            this.lbDatosDireccion.Location = new System.Drawing.Point(330, 103);
+            this.lbDatosDireccion.Name = "lbDatosDireccion";
+            this.lbDatosDireccion.Size = new System.Drawing.Size(67, 16);
+            this.lbDatosDireccion.TabIndex = 5;
+            this.lbDatosDireccion.Text = "Dirección:";
+            // 
+            // lbDatosNombre
+            // 
+            this.lbDatosNombre.AutoSize = true;
+            this.lbDatosNombre.Location = new System.Drawing.Point(330, 65);
+            this.lbDatosNombre.Name = "lbDatosNombre";
+            this.lbDatosNombre.Size = new System.Drawing.Size(62, 16);
+            this.lbDatosNombre.TabIndex = 4;
+            this.lbDatosNombre.Text = "Nombre: ";
+            // 
+            // lbFoto
+            // 
+            this.lbFoto.AutoSize = true;
+            this.lbFoto.Location = new System.Drawing.Point(34, 25);
+            this.lbFoto.Name = "lbFoto";
+            this.lbFoto.Size = new System.Drawing.Size(179, 16);
+            this.lbFoto.TabIndex = 3;
+            this.lbFoto.Text = "Selecciona una foto de perfil:";
+            // 
+            // lbHora
+            // 
+            this.lbHora.AutoSize = true;
+            this.lbHora.Location = new System.Drawing.Point(88, 292);
+            this.lbHora.Name = "lbHora";
+            this.lbHora.Size = new System.Drawing.Size(91, 16);
+            this.lbHora.TabIndex = 2;
+            this.lbHora.Text = "Hora: 00:00:00";
             // 
             // btnFoto
             // 
@@ -407,14 +510,15 @@
             this.btnFoto.UseVisualStyleBackColor = true;
             this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
             // 
-            // lbHora
+            // pbxFoto
             // 
-            this.lbHora.AutoSize = true;
-            this.lbHora.Location = new System.Drawing.Point(88, 292);
-            this.lbHora.Name = "lbHora";
-            this.lbHora.Size = new System.Drawing.Size(91, 16);
-            this.lbHora.TabIndex = 2;
-            this.lbHora.Text = "Hora: 00:00:00";
+            this.pbxFoto.Image = ((System.Drawing.Image)(resources.GetObject("pbxFoto.Image")));
+            this.pbxFoto.Location = new System.Drawing.Point(37, 44);
+            this.pbxFoto.Name = "pbxFoto";
+            this.pbxFoto.Size = new System.Drawing.Size(194, 176);
+            this.pbxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxFoto.TabIndex = 0;
+            this.pbxFoto.TabStop = false;
             // 
             // timerHora
             // 
@@ -425,100 +529,44 @@
             // 
             this.abrirFotoPerfil.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.bmp";
             // 
-            // lbFoto
+            // btnGuardar
             // 
-            this.lbFoto.AutoSize = true;
-            this.lbFoto.Location = new System.Drawing.Point(34, 25);
-            this.lbFoto.Name = "lbFoto";
-            this.lbFoto.Size = new System.Drawing.Size(179, 16);
-            this.lbFoto.TabIndex = 3;
-            this.lbFoto.Text = "Selecciona una foto de perfil:";
+            this.btnGuardar.Location = new System.Drawing.Point(198, 383);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(96, 39);
+            this.btnGuardar.TabIndex = 1;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // lbDatosNombre
+            // btnLimpiar
             // 
-            this.lbDatosNombre.AutoSize = true;
-            this.lbDatosNombre.Location = new System.Drawing.Point(330, 65);
-            this.lbDatosNombre.Name = "lbDatosNombre";
-            this.lbDatosNombre.Size = new System.Drawing.Size(62, 16);
-            this.lbDatosNombre.TabIndex = 4;
-            this.lbDatosNombre.Text = "Nombre: ";
+            this.btnLimpiar.Location = new System.Drawing.Point(384, 383);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(95, 39);
+            this.btnLimpiar.TabIndex = 2;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // lbDatosDireccion
+            // btnSalir
             // 
-            this.lbDatosDireccion.AutoSize = true;
-            this.lbDatosDireccion.Location = new System.Drawing.Point(330, 103);
-            this.lbDatosDireccion.Name = "lbDatosDireccion";
-            this.lbDatosDireccion.Size = new System.Drawing.Size(67, 16);
-            this.lbDatosDireccion.TabIndex = 5;
-            this.lbDatosDireccion.Text = "Dirección:";
-            // 
-            // lbDatosEmail
-            // 
-            this.lbDatosEmail.AutoSize = true;
-            this.lbDatosEmail.Location = new System.Drawing.Point(330, 146);
-            this.lbDatosEmail.Name = "lbDatosEmail";
-            this.lbDatosEmail.Size = new System.Drawing.Size(48, 16);
-            this.lbDatosEmail.TabIndex = 6;
-            this.lbDatosEmail.Text = "E-mail:";
-            // 
-            // lbDatosGenero
-            // 
-            this.lbDatosGenero.AutoSize = true;
-            this.lbDatosGenero.Location = new System.Drawing.Point(330, 188);
-            this.lbDatosGenero.Name = "lbDatosGenero";
-            this.lbDatosGenero.Size = new System.Drawing.Size(55, 16);
-            this.lbDatosGenero.TabIndex = 7;
-            this.lbDatosGenero.Text = "Género:";
-            // 
-            // lbDatosEdad
-            // 
-            this.lbDatosEdad.AutoSize = true;
-            this.lbDatosEdad.Location = new System.Drawing.Point(516, 65);
-            this.lbDatosEdad.Name = "lbDatosEdad";
-            this.lbDatosEdad.Size = new System.Drawing.Size(43, 16);
-            this.lbDatosEdad.TabIndex = 8;
-            this.lbDatosEdad.Text = "Edad:";
-            // 
-            // lbDatosFechaNac
-            // 
-            this.lbDatosFechaNac.AutoSize = true;
-            this.lbDatosFechaNac.Location = new System.Drawing.Point(516, 103);
-            this.lbDatosFechaNac.Name = "lbDatosFechaNac";
-            this.lbDatosFechaNac.Size = new System.Drawing.Size(134, 16);
-            this.lbDatosFechaNac.TabIndex = 9;
-            this.lbDatosFechaNac.Text = "FechaDeNacimiento:";
-            // 
-            // lbDatosPais
-            // 
-            this.lbDatosPais.AutoSize = true;
-            this.lbDatosPais.Location = new System.Drawing.Point(516, 146);
-            this.lbDatosPais.Name = "lbDatosPais";
-            this.lbDatosPais.Size = new System.Drawing.Size(37, 16);
-            this.lbDatosPais.TabIndex = 10;
-            this.lbDatosPais.Text = "País:";
-            // 
-            // lbDatosHobbies
-            // 
-            this.lbDatosHobbies.Location = new System.Drawing.Point(516, 188);
-            this.lbDatosHobbies.Name = "lbDatosHobbies";
-            this.lbDatosHobbies.Size = new System.Drawing.Size(197, 90);
-            this.lbDatosHobbies.TabIndex = 11;
-            this.lbDatosHobbies.Text = "Hobbies:";
-            // 
-            // lbDatosSuscripcion
-            // 
-            this.lbDatosSuscripcion.AutoSize = true;
-            this.lbDatosSuscripcion.Location = new System.Drawing.Point(516, 282);
-            this.lbDatosSuscripcion.Name = "lbDatosSuscripcion";
-            this.lbDatosSuscripcion.Size = new System.Drawing.Size(88, 16);
-            this.lbDatosSuscripcion.TabIndex = 12;
-            this.lbDatosSuscripcion.Text = "Subscripcion:";
+            this.btnSalir.Location = new System.Drawing.Point(580, 383);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(86, 39);
+            this.btnSalir.TabIndex = 3;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 450);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.tabControlPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -557,7 +605,7 @@
         private System.Windows.Forms.RadioButton rbtFem;
         private System.Windows.Forms.RadioButton rbtMasc;
         private System.Windows.Forms.TextBox tbxCorreo;
-        private System.Windows.Forms.TextBox tbxDirección;
+        private System.Windows.Forms.TextBox tbxDireccion;
         private System.Windows.Forms.TextBox tbxNombre;
         private System.Windows.Forms.TabPage tabPreferencias;
         private System.Windows.Forms.Label lbSatisfaccion;
@@ -584,6 +632,10 @@
         private System.Windows.Forms.Label lbDatosGenero;
         private System.Windows.Forms.Label lbDatosEmail;
         private System.Windows.Forms.Label lbDatosDireccion;
+        private System.Windows.Forms.Label lbPulsarGuardar;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
 

@@ -131,5 +131,10 @@ namespace GestionAvanzadaDeInformacionPersonal
         {
             this.Close();
         }
+
+        private void trbSatisfaccion_Scroll(object sender, EventArgs e)
+        {
+            lbNumSatisfaccion.Text = trbSatisfaccion.Value.ToString();
+        }
     }
 }
